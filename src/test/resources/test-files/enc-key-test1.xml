@@ -1,0 +1,16 @@
+<xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" Recipient="b.department@mb-laurentius.si">
+    <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+    <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>CN=Test recipient, O=SVEV, C=BE</ds:KeyName>
+        <ds:X509Data>
+            <ds:X509Certificate>MIIC5jCCAc6gAwIBAgIEXDs6MDANBgkqhkiG9w0BAQsFADA1MQswCQYDVQQGEwJCRTENMAsGA1UECgwEU1ZFVjEXMBUGA1UEAwwOVGVzdCByZWNpcGllbnQwHhcNMTkwMTEzMTMxNjMyWhcNMjkwMTEwMTMxNjMyWjA1MQswCQYDVQQGEwJCRTENMAsGA1UECgwEU1ZFVjEXMBUGA1UEAwwOVGVzdCByZWNpcGllbnQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCKJTzhTyC+HSwxxRSiqdcRPof9J/c/VFq2W9O2hFMQzlYctvxGcj/V7xwuPUtmoVI6Ixb6lAFtCf0RVC8GmQAsLk1tULXe0xqd/cRhjxNcMAOEoVWPAbUP4mUFPdtH2DAaBDr5WMuZHTp2DBs05JooEf111wWZvjnhgq+ZiXugpqN9OJKaKtdrp4k5apCYGRPEZ/dqIE0cLHqSeJsvE9NQE5JJPccIEo/IX7kKsODsaWhDvK/xhgRZLEohLtEW/zMU+iDnHUw9xnZSGxFwwH6ARQoS8RglXg6OS+YoPuO/F+Cbta12r+sg5oCvmvM1CGXbZT8rO6YlOnng+gUWP2jFAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAA+zFSaJ2VuYOTFj86XxxzvViZQ8pc/RE+slG3NghuYWsDGNuN0dS8/TzhUlFL4rPqihYhXb1IsRcdAxChQd3vT2FLA7mgRLE2KUwq8fGRBjAqn/JDe8ORT9kRJinGxbgNvuPnwDH6HH7fBkSCG8UsCx7w/49b3ZCZdQ5El2NjvEtxxdNnIRWvuZMvu4L6fEhbWTcuk7YGOoSRynHH5WFVksg4LbZHArinT0351+9b4JLleTXegcLXCvkFEkBVEF4+E8fcyJilaYAWi48fI8W5duSMugfg03orCBUQGWrek0fULvvRKTRudms6cN1lIQfSNR7Ff3EPJqaY11zXwgRJc=</ds:X509Certificate>
+        </ds:X509Data>
+    </ds:KeyInfo>
+    <xenc:CipherData>
+        <xenc:CipherValue>g61tPXTMtG2VZhKUr3aBZ3SckV3SXW9/N4WJ881GEt4xwlSNp/XBLr2RGyJ5nNW5WhgMPD9iWQFRlFmnsi4gKdb/lShhvpkzIxFWOiJsnrvodAjrxQEtf491qNWU2/hdTW2KkVZyrXt9CaGqUIW/Yc5oL75MKGm+h9GeZ/wOdpURF1EheiDsGSUqy3QxsFjfoZ18VTWV+HTzH9kmLjuIDtcPI6KVadKkmjXlmTnPV6gPw1N9ydbbQV1C4M0tS5TxbiLovB6rnGVvGdIQMU0EfnyY95RugVaEFKpTyVfJbUxTwVCuMnMHbsAV5N+0/iInPayxagzg6Qt3U3CYEC1JRw==</xenc:CipherValue>
+    </xenc:CipherData>
+    <xenc:ReferenceList>
+        <xenc:DataReference URI="3@mb-laurentius.si"/>
+    </xenc:ReferenceList>
+    <xenc:CarriedKeyName>CN=Test recipient, O=SVEV, C=BE</xenc:CarriedKeyName>
+</xenc:EncryptedKey>

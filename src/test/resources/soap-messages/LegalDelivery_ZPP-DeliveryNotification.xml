@@ -1,0 +1,112 @@
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by XMLSpy 2007 Professional Ed., Installed for 5 users (with SMP from 2007-02-06 to 2008-02-07) (CIF VSRS) -->
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+	<env:Header>
+		<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" env:mustUnderstand="true">
+			<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="SIG-30566bb6-86df-4c3d-96f8-2c51b85004fb">
+				<ds:SignedInfo>
+					<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+						<ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="env"/>
+					</ds:CanonicalizationMethod>
+					<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+					<ds:Reference URI="#id-eeb4bc25-d737-4e2a-bd91-5c94a2d66809">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+						<ds:DigestValue>WtWP1GBrRjPkd3LsxVyI8+DEtkwi3YecBHgKz39/QMw=</ds:DigestValue>
+					</ds:Reference>
+					<ds:Reference URI="cid:04df5851-953a-4c79-a0c9-64c920b6d1af@mb-laurentius.si">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://docs.oasis-open.org/wss/oasis-wss-SwAProfile-1.1#Attachment-Content-Signature-Transform"/>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+						<ds:DigestValue>YYNZkCZ/MDTOG4+UPjPj9kOMhU7nGBnpjlNsam5j2G0=</ds:DigestValue>
+					</ds:Reference>
+					<ds:Reference URI="cid:6873b16a-d637-49ef-b014-a1db99e53d82@mb-laurentius.si">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://docs.oasis-open.org/wss/oasis-wss-SwAProfile-1.1#Attachment-Content-Signature-Transform"/>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+						<ds:DigestValue>C3oUfl0R3jONvE87aLMsJTRi5OkFncOCnmpyYw2k9NA=</ds:DigestValue>
+					</ds:Reference>
+				</ds:SignedInfo>
+				<ds:SignatureValue>KadFWxOqsaEoyNiHwmIELtnDOi+6Jy8zrsPd0bCzSrtoOA1NTtPJOjwNZL1LdOkopLwP9NAj+OkG27dooPqecxepIoH3qs095/XFoD58H+uU663ILAOLGfyjSqABQY1h9uKuLv7hbGmaCa3Bbt4QAFZ83vlds2zXGczm3VVuhcFfufSJv0sV6A32zY/rQJnV2eHkrFLDTw4/06Ur+SE0mJt5jksxbNjb60ukfaYoe40V1eA85bMvVybK4X8qaDSj3pBgtxOOdtlIxkdA9UthLKcnLtPpaR1eiiVxH7X2fkyb05o5dvv7xZxdTa8DL4dzAGsa8/6CMG1wsKgLhbcG0w==</ds:SignatureValue>
+				<ds:KeyInfo Id="KI-56776f26-c2c8-4bf3-87d7-0834a8d0882e">
+					<wsse:SecurityTokenReference xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="STR-5d507b0a-ab73-407b-b98a-726fc1c74bac">
+						<ds:X509Data>
+							<ds:X509IssuerSerial>
+								<ds:X509IssuerName>CN=test-laurentius,OU=laurentius,OU=cif,OU=vsrs,OU=si</ds:X509IssuerName>
+								<ds:X509SerialNumber>398002935</ds:X509SerialNumber>
+							</ds:X509IssuerSerial>
+						</ds:X509Data>
+					</wsse:SecurityTokenReference>
+				</ds:KeyInfo>
+			</ds:Signature>
+		</wsse:Security>
+		<ns2:Messaging xmlns:ns2="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:ns3="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" env:mustUnderstand="true" id="SED-218f34e6-f0cd-4999-9c6c-a7b8b9612f01" wsu:Id="id-eeb4bc25-d737-4e2a-bd91-5c94a2d66809">
+			<ns2:UserMessage>
+				<ns2:MessageInfo>
+					<ns2:Timestamp>2019-01-13T07:33:57.350+01:00</ns2:Timestamp>
+					<ns2:MessageId>108f32a5-2384-4943-ba6b-efa672ede80d@mb-laurentius.si</ns2:MessageId>
+				</ns2:MessageInfo>
+				<ns2:PartyInfo>
+					<ns2:From>
+						<ns2:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:unregistered:si-svev:name">a.department@mb-laurentius.si</ns2:PartyId>
+						<ns2:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:unregistered:si-svev:sed-box">a.department@mb-laurentius.si</ns2:PartyId>
+						<ns2:Role>Sender</ns2:Role>
+					</ns2:From>
+					<ns2:To>
+						<ns2:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:unregistered:si-svev:name">b.department@mb-laurentius.si</ns2:PartyId>
+						<ns2:PartyId type="urn:oasis:names:tc:ebcore:partyid-type:unregistered:si-svev:sed-box">b.department@mb-laurentius.si</ns2:PartyId>
+						<ns2:Role>Receiver</ns2:Role>
+					</ns2:To>
+				</ns2:PartyInfo>
+				<ns2:CollaborationInfo>
+					<ns2:Service type="SVEV">LegalDelivery_ZPP</ns2:Service>
+					<ns2:Action>DeliveryNotification</ns2:Action>
+					<ns2:ConversationId>1@mb-laurentius.si</ns2:ConversationId>
+				</ns2:CollaborationInfo>
+				<ns2:MessageProperties>
+					<ns2:Property name="description">Test mail</ns2:Property>
+					<ns2:Property name="submitDate">2019-01-13T07:33:53.072+01:00</ns2:Property>
+					<ns2:Property name="sender_msg_id">b89834c1-038a-4ca0-a251-ae93c6e6765d</ns2:Property>
+					<ns2:Property name="originalSender">a.department@mb-laurentius.si</ns2:Property>
+					<ns2:Property name="finalRecipient">b.department@mb-laurentius.si</ns2:Property>
+					<ns2:Property name="SodiSif">S01</ns2:Property>
+					<ns2:Property name="Vsebina">Test court mail</ns2:Property>
+				</ns2:MessageProperties>
+				<ns2:PayloadInfo>
+					<ns2:PartInfo href="cid:04df5851-953a-4c79-a0c9-64c920b6d1af@mb-laurentius.si">
+						<ns2:Description xml:lang="en">Obvestilo o prispeli pošiljki</ns2:Description>
+						<ns2:PartProperties>
+							<ns2:Property name="http://www.sodisce.si/ZPP/PartCreated">2019-01-13T07:33:57.003471</ns2:Property>
+							<ns2:Property name="CharacterSet">base64</ns2:Property>
+							<ns2:Property name="MimeType">application/pdf</ns2:Property>
+							<ns2:Property name="Name">ObvestiloOPosiljki</ns2:Property>
+							<ns2:Property name="Filename">ObvestiloOPosiljki.pdf</ns2:Property>
+							<ns2:Property name="Type">http://www.sodisce.si/ZPP/DeliveryNotification</ns2:Property>
+							<ns2:Property name="IsEncrypted">false</ns2:Property>
+						</ns2:PartProperties>
+					</ns2:PartInfo>
+					<ns2:PartInfo href="cid:6873b16a-d637-49ef-b014-a1db99e53d82@mb-laurentius.si">
+						<ns2:Description xml:lang="en">Sifriran dok.: </ns2:Description>
+						<ns2:PartProperties>
+							<ns2:Property name="OriginMimeType">text/plain</ns2:Property>
+							<ns2:Property name="http://www.sodisce.si/ZPP/RefPartEbmsId">2cd2ba76-de96-40e9-8c98-9e1073cb64b4@mb-laurentius.si</ns2:Property>
+							<ns2:Property name="http://www.sodisce.si/ZPP/RefPartMimeType">text/plain</ns2:Property>
+							<ns2:Property name="http://www.sodisce.si/ZPP/RefPartName">document12757805523875970424</ns2:Property>
+							<ns2:Property name="http://www.sodisce.si/ZPP/RefPartDigestSHA256">aa633d77c6ed48e559ee6eaec089c5d28c7b835061c9663712562087707c523b</ns2:Property>
+							<ns2:Property name="http://www.sodisce.si/ZPP/PartCreated">2019-01-13T07:33:57.011716</ns2:Property>
+							<ns2:Property name="MimeType">application/octet-stream</ns2:Property>
+							<ns2:Property name="Name">document12757805523875970424</ns2:Property>
+							<ns2:Property name="Filename">document12757805523875970424.txt.zpp.enc</ns2:Property>
+							<ns2:Property name="Type">http://www.sodisce.si/ZPP/EncryptedPart</ns2:Property>
+							<ns2:Property name="IsEncrypted">true</ns2:Property>
+						</ns2:PartProperties>
+					</ns2:PartInfo>
+				</ns2:PayloadInfo>
+			</ns2:UserMessage>
+		</ns2:Messaging>
+	</env:Header>
+	<env:Body/>
+</env:Envelope>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:fo="http://www.w3.org/1999/XSL/Format" 
+                xmlns:env="http://www.w3.org/2003/05/soap-envelope" 
+                xmlns:ns2="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" 
+                xmlns:ns3="http://schemas.xmlsoap.org/soap/envelope/"
+                xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                xmlns:java="http://xml.apache.org/xslt/java" exclude-result-prefixes="java"   >
+    <xsl:output method="xml" indent="yes"/>
+    <xsl:template match="/">
+        <fo:root font-family="Arial" font-size="12pt">
+            <fo:layout-master-set>
+                <fo:simple-page-master master-name="A4-portrait" page-height="29.7cm" page-width="21.0cm" margin="2cm">
+                    <fo:region-body/>
+                </fo:simple-page-master>
+            </fo:layout-master-set>
+            <fo:page-sequence master-reference="A4-portrait">
+                <xsl:variable name="varFormatedSentDate">
+                    <xsl:call-template name="currentDateTime" />					
+                </xsl:variable>
+                <fo:flow flow-name="xsl-region-body">
+                    <fo:block  margin-top="1.5cm" font-size="12pt" linefeed-treatment="preserve">
+                        VROČILNICA (141.a člen ZPP)
+                    </fo:block>
+     
+                    <fo:block margin-top="1.5cm" font-size="12pt" font-weight="bold" linefeed-treatment="preserve">					
+                        Pošiljatelj</fo:block>
+                    <fo:block font-size="12pt">
+                        <xsl:value-of select="/env:Envelope/env:Header/ns2:Messaging/ns2:UserMessage/ns2:MessageProperties/ns2:Property[@name='originalSender']"/>
+                    </fo:block>
+                    <fo:block font-size="12pt" font-weight="bold" linefeed-treatment="preserve">					
+                        Naslovnik</fo:block>
+                    <fo:block font-size="12pt">
+                        <xsl:value-of select="/env:Envelope/env:Header/ns2:Messaging/ns2:UserMessage/ns2:MessageProperties/ns2:Property[@name='finalRecipient']"/>
+                    </fo:block>
+
+                    <fo:block font-size="12pt" font-weight="bold" linefeed-treatment="preserve">
+                        Zadeva: Vročilnica
+                    </fo:block>
+                    <fo:block font-size="12pt" linefeed-treatment="preserve">
+                        Naslovnik potrjujem, da sem dne: <fo:inline font-weight="bold">
+                            <xsl:call-template name="currentDate"/>
+                        </fo:inline> sprejel pošiljko z oznako 
+                        <fo:inline font-weight="bold">
+                            <xsl:value-of select="/env:Envelope/env:Header/ns2:Messaging/ns2:UserMessage/ns2:MessageProperties/ns2:Property[@name='Vsebina']"/> (<xsl:value-of select="/env:Envelope/env:Header/ns2:Messaging/ns2:UserMessage/ns2:MessageInfo/ns2:MessageId"/>)</fo:inline>. 	
+				 
+                        To sporočilo je potrdilo o vročitvi pošiljke in opravljeni storitvi.
+                    </fo:block>
+
+                    <fo:block font-size="12pt"  margin-top="1.0cm">
+                        Storitev: Elektronska vročitev pošiljke po ZPP osebno,
+                    </fo:block>                    
+                    <fo:block font-size="12pt" >
+                        Enolična oznaka storitve: <xsl:value-of select="/env:Envelope/env:Header/ns2:Messaging/ns2:UserMessage/ns2:CollaborationInfo/ns2:ConversationId"/>.
+                    </fo:block>
+
+                    <fo:block font-size="12pt"   margin-top="1.0cm">	
+                        Laurentius, <xsl:call-template name="currentDateTime"/>.
+                    </fo:block>
+                </fo:flow>
+            </fo:page-sequence>
+        </fo:root>
+    </xsl:template>
+
+    <xsl:template name="currentDateTime">
+        <xsl:value-of select="java:com.as4mail.svev.utils.XSLTExtensions.currentDateTime()"/>
+    </xsl:template>
+    <xsl:template name="currentDate">
+        <xsl:value-of select="java:com.as4mail.svev.utils.XSLTExtensions.currentDate()"/>
+    </xsl:template>
+   
+</xsl:stylesheet>
